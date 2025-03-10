@@ -5,6 +5,28 @@
 
 using namespace std;
 
+class MyDictionary{
+    public:
+        MyDictionary(){
+            this->key=0;
+            this->value=0;
+        }
+        MyDictionary(int key, int value){
+            this->key=key;
+            this->value=value;
+        }
+        int getKey(){
+            return this->key;
+        }
+        void setKey(int key){
+            this->key=key;
+        }
+    private:
+        int key;
+        int value;
+    
+};
+
 void createDic(map<int, int> &dic, int dim){
     cout<<"---Create Dictionary---"<<endl;
     for(int i=0; i<dim; i++){
@@ -55,6 +77,8 @@ void deleteDic(map<int,int> dic, int k){
 int main(){
 
     map<int, int> dic;
+    MyDictionary tryDic(1,2);
+    cout<<tryDic.getKey()<<endl;
     int dim;
     cout<< "Insert Dictionary Length"<<endl;
     cin>>dim;
@@ -67,5 +91,6 @@ int main(){
         cout<<i<<endl;
     }
 
+    
     return 0;
 }
