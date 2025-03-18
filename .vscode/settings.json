@@ -3,7 +3,8 @@
         "cpp": "cd $dir && g++  -std=c++11 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "iostream": "cpp",
         "ostream": "cpp",
-        "vector": "cpp"
-
+        "vector": "cpp",
+        "list": "cpp",
+        "*.tpp": "cpp"
     }
 }
