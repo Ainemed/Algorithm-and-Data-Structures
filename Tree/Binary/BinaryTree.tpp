@@ -1,5 +1,9 @@
 #include "BinaryTree.hpp"
-// Struct Node
+
+//---------------------------------------------------------- STRUCT CREATION ------------------------------------------------------
+
+//---------------------------------------------------------- Struct Node ------------------------------------------------------
+
 template <typename T>
 Node<T>::Node(T key) : p(nullptr), left(nullptr), right(nullptr), key(key) {}
 
@@ -9,14 +13,17 @@ Node<T>::Node() : p(nullptr), left(nullptr), right(nullptr), key(' ') {}
 template <typename T>
 Node<T>::Node(Node* p, Node* left, Node* right, T key) : p(p), left(left), right(right), key(key) {}
 
-// Struct Tree
+//---------------------------------------------------------- Struct Tree ------------------------------------------------------
 template <typename T>
 Tree<T>::Tree() : root(nullptr) {}
 
 template <typename T>
 Tree<T>::Tree(Node<T>* root) : root(root) {}
 
-// Functions Implementation
+//---------------------------------------------------------- FUNCTIONS ------------------------------------------------------------
+
+//---------------------------------------------------------- Father Node --------------------------------------------------------
+
 template <typename T>
 /**
  * @brief Retrun the father of the node v, Complexity : Θ(1)
@@ -27,6 +34,9 @@ template <typename T>
 Node<T>* fatherTree(Node<T>* v) {
     return v->p;
 }
+
+//---------------------------------------------------------- Empty Tree --------------------------------------------------------
+
 
 template <typename T>
 /**
@@ -39,6 +49,8 @@ template <typename T>
 bool emptyTree(Tree<T> tree) {
     return tree.root == nullptr;
 }
+
+//---------------------------------------------------------- Sons Node --------------------------------------------------------
 
 template <typename T>
 /**
@@ -54,6 +66,9 @@ list<Node<T>*> sonsTree(Tree<T> tree, Node<T>* v) {
     if (v->right) nodeList.push_back(v->right);
     return nodeList;
 }
+
+//---------------------------------------------------------- Show Tree --------------------------------------------------------
+
 
 template <typename T>
 /**
