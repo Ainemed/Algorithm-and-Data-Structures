@@ -37,7 +37,7 @@ template <typename T> void preorder_seeDFS_Ric(Node<T>* v);
 template <typename T> void symmetric_seeDFS_Ric(Node<T>* v);
 template <typename T> void postorder_seeDFS_Ric(Node<T>* v);
 template <typename T> void seeBFS_Iter(Node<T>* v);
-
+template<typename T> bool K_Balanced(Node<T>* u, int k);
 
 #include "BinaryTree.tpp" 
 
