@@ -27,7 +27,7 @@ template<typename T>
  * @return false if it is not K Balanced
  */
 bool K_Balanced(Node<T>* u, int k){
-    int min, max;
+    int min=0, max=0;
     K_BalancedAux(u,min,max);
     return (max - min <= k);
 }

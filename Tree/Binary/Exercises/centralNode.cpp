@@ -1,4 +1,5 @@
 #include "../BinaryTree.hpp"
+
 template <typename T>
 int countCentreAux(Node<T>* u, int sum, int& numf) {
     int nodic, nodisx, numfsx, nodidx, numfdx;
@@ -20,7 +21,7 @@ int countCentreAux(Node<T>* u, int sum, int& numf) {
 }
 
 template <typename T>
-int countCentre(Node<T>* u) {
+int countCentre(Node<T>*  u) {
     int numf;
     return countCentreAux(u, 0, numf);
 }
