@@ -1,31 +1,4 @@
-#include <iostream>
-
-using namespace std;
-
-void createArray(vector<int>& arr){
-    int dim;
-    cout<<"Set the Size: ";
-    cin>>dim;
-    cout<<"---------------"<<endl;
-    for (size_t i = 0; i < dim; i++)
-    {
-        int elem=0;
-        cout<<"Elem "<<i+1<<" : ";
-        cin>>elem;
-        arr.push_back(elem);
-        
-    }
-}
-
-void printArr(vector<int> arr){
-    cout<<"----- Print Array -----"<<endl;
-    for (size_t i = 0; i < arr.size(); i++)
-    {
-        cout<<arr.at(i)<<endl;
-    }
-    
-}
-
+#include "../SortArray.hpp"
 /**
  * @brief Incremental Algorithm of Sorting, Complexity: Θ(n^2)
  * 
@@ -65,9 +38,6 @@ void insertionSort_RicAux2(vector<int>& arr, int i, int tmp){
 
 void insertionSort_RicAux(vector<int>& arr, int i, int tmp, int j){ // theta(n)
     if(i<arr.size()-1){
-
-        
-        
         if(j>0 && tmp < arr.at(j)){
             cout<<"tmp: "<<tmp<<" i: "<<i<<" j: "<<j<<endl;
             arr.at(j+1) = arr.at(j);
@@ -76,8 +46,6 @@ void insertionSort_RicAux(vector<int>& arr, int i, int tmp, int j){ // theta(n)
         cout<<"tmp: "<<tmp<<" arr.at(j+1): "<<arr.at(j+1)<<endl;
         arr.at(j+1)=tmp;
         insertionSort_RicAux(arr, i+1, arr.at(i+1),i);
-        
-        
     }
 }
 
@@ -88,13 +56,13 @@ void insertionSort_Ric(vector<int>& arr){
 }
 
 int main(){
-    vector<int> arr;
-    createArray(arr);
-    printArr(arr);
-    cout<<"-----------"<<endl;
-    insertionSort_Ric(arr);
+    Sort<int> sort;
     
-    printArr(arr);
+    sort.printArr();
+    cout<<"-----------"<<endl;
+    insertionSort_Ric(sort.arr);
+    
+    sort.printArr();
 
     
 

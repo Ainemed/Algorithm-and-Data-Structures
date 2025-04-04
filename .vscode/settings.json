@@ -5,6 +5,7 @@
         "ostream": "cpp",
         "vector": "cpp",
         "list": "cpp",
-        "*.tpp": "cpp"
+        "*.tpp": "cpp",
+        "stack": "cpp"
     }
 }
