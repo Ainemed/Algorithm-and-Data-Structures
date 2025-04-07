@@ -1,6 +1,7 @@
 #include "BSTree.hpp"
 
 
+
 int main(){
     vector<int> arr;
     int dim, search=0;
@@ -22,13 +23,20 @@ int main(){
     cout<<"---Show the Tree---"<<endl;
     preorder_seeBST_Ric(tree.root);
 
+    cout<<"---Show the Predecessor---"<<endl;
+    BSTNode<int> *elemPred= BST_Predecessor(tree.root);
+    cout<<elemPred->key<<endl;
+
+    cout<<"---Show the Successor---"<<endl;
+    BSTNode<int> *elemSucc= BST_Successor(tree.root);
+    cout<<elemSucc->key<<endl;
 
     cout<<"---Search The Maximum Node---"<<endl;
     BSTNode<int> *elemMax = BSTree_max(tree.root);
     cout<<"The biggest is: "<<elemMax->key<<endl;
 
 
-    cout<<"---Search The Maximum Node---"<<endl;
+    cout<<"---Search The Minimum Node---"<<endl;
     BSTNode<int> *elemMin = BSTree_min(tree.root);
     cout<<"The biggest is: "<<elemMin->key<<endl;
 

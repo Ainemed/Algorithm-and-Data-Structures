@@ -89,7 +89,19 @@ void seeDFS_Iter(Node<T>* v) {
         }
     }
 }
-
+template <typename T>
+/**
+ * @brief Print all the node of the tree  , Complexity : Θ(n)
+ * 
+ * @param v 
+ */
+void seeDFS_Ric(Node<T>* v){
+    if(v){
+        cout<<v->key<<endl;
+        seeDFS_Ric(v->left);
+        seeDFS_Ric(v->right);
+    }
+}
 template <typename T>
 /**
  * @brief Show all the nodes of the tree in Preorder way (A,L,E,R,B,O) , Complexity : Θ(n)

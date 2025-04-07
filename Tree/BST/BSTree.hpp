@@ -40,6 +40,8 @@ template <typename T> BSTNode<T>* createBSTree_tot_aux(const vector<T>& arr, int
 template <typename T> BSTree<T> createBSTree_tot(vector<T> arr);
 template<typename T> void BSTree_Transplant(BSTree<T>& tree, BSTNode<T>* u,BSTNode<T>* v);
 template<typename T> void BSTree_Delete(BSTree<T>& tree, BSTNode<T>* z);
+template<typename T> BSTNode<T>* BST_Successor(BSTNode<T>* x);
+template<typename T> BSTNode<T>* BST_Predecessor(BSTNode<T>* x);
 
 #include "BSTree.tpp"
 

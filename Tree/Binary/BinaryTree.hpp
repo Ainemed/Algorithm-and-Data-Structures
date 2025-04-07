@@ -33,6 +33,7 @@ template <typename T> Node<T>* fatherTree(Node<T>* v);
 template <typename T> bool emptyTree(Tree<T> tree);
 template <typename T> list<Node<T>*> sonsTree(Tree<T> tree, Node<T>* v);
 template <typename T> void seeDFS_Iter(Node<T>* v);
+template <typename T> void seeDFS_Ric(Node<T>* v);
 template <typename T> void preorder_seeDFS_Ric(Node<T>* v);
 template <typename T> void symmetric_seeDFS_Ric(Node<T>* v);
 template <typename T> void postorder_seeDFS_Ric(Node<T>* v);

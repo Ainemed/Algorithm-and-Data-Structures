@@ -18,7 +18,7 @@ int main(){
     elem6.p=&elem3;
 
 
-    preorder_seeDFS_Ric(tree.root);
+    seeDFS_Ric(tree.root);
 
     
     cout<<"-----"<<endl;

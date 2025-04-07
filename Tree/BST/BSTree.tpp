@@ -261,3 +261,52 @@ void BSTree_Delete(BSTree<T>& tree, BSTNode<T>* z){
         }
     }
 }
+
+//---------------------------------------------------------- Successor BSTNode -----------------------------------------------------
+
+
+template<typename T>
+/**
+ * @brief Find the Successor of the given BSTNode, Complexity: T(n)=O(h), where h is the height of the tree
+ * 
+ * @param x 
+ * @return BSTNode<T>* 
+ */
+BSTNode<T>* BST_Successor(BSTNode<T>* x){
+    if(x->right){
+        return BSTree_min(x->right);
+    }else{
+        BSTNode<T>* y = x->p;
+        while (y && x == y->right)
+        {
+            x = y;
+            y = y->p;
+        }
+        return y;
+        
+    }
+}
+
+//---------------------------------------------------------- Predecessor BSTNode -----------------------------------------------------
+
+template<typename T>
+/**
+ * @brief Find the Predecessor of the given BSTNode, Complexity: T(n)=O(h), where h is the height of the tree
+ * 
+ * @param x 
+ * @return BSTNode<T>* 
+ */
+BSTNode<T>* BST_Predecessor(BSTNode<T>* x){
+    if(x->left){
+        return BSTree_max(x->left);
+    }else{
+        BSTNode<T>* y = x->p;
+        while (y && x == y->left)
+        {
+            x = y;
+            y = y->p;
+        }
+        return y;
+        
+    }
+}
