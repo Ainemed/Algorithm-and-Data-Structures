@@ -51,6 +51,7 @@ void mergeSort(vector<int>& arr, int p, int r){
 
 
 int main(){
+    cout<<5/2<<endl;
     Sort<int> sort;
     
     sort.printArr();

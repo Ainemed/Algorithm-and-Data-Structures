@@ -31,7 +31,16 @@ void backtrack_comb_arr(vector<vector<int>>& res, vector<int>& combination, vect
         combination.pop_back();
     }
 }
-
+void backtrack_comb_arr_max(int& res, vector<int>& nums, int k, int start, int max){
+    if(max==k){
+        res++;
+    }
+    for(int i=start; i<nums.size(); i++){
+        max += nums.at(i);
+        cout<<nums.at(i)<<endl;
+        backtrack_comb_arr_max(res,nums,k,i+1,max);
+    }
+}
 int main(){
     
     vector<vector<int>> res;
@@ -54,8 +63,9 @@ int main(){
         cin>>tmp;
         nums.push_back(tmp);
     }
-
-    backtrack_comb_arr(res, combination, nums, k,0);
+    int sol=0;
+    backtrack_comb_arr(res,combination,nums,k,0);
+    backtrack_comb_arr_max(sol, nums, k,0,0);
 
     for (size_t i = 0; i < res.size(); i++)
     {
@@ -65,7 +75,7 @@ int main(){
         }
         cout<<"],"<<endl;
     }    
-    
+    cout<<sol<<endl;
 
     return 0;
 }

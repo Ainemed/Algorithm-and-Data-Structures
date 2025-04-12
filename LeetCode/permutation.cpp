@@ -76,7 +76,7 @@ int main(){
     for (size_t i = 0; i < dim; i++)
     {
         int tmp;
-        cout<<"Elem "<<i+1<<" :";
+        cout<<"Elem "<<i+1<<" : ";
         cin>>tmp;
         nums.push_back(tmp);
         used.push_back(false);
