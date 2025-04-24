@@ -6,6 +6,10 @@
         "vector": "cpp",
         "list": "cpp",
         "*.tpp": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "limits": "cpp",
+        "ratio": "cpp",
+        "algorithm": "cpp",
+        "stdexcept": "cpp"
     }
 }
