@@ -55,14 +55,15 @@ void insertionSort(vector<int>& arr){
 }
 
 void mergeSort(vector<int>& arr, int p, int r){
-		if(arr.size()>=5 && arr.size()<=25){
-				insertionSort(arr);
-		}
-    if(p<r){
-        int med = (p+r)/2, q=med;
-        mergeSort(arr, p, med);
-        mergeSort(arr, med+1, r);
-        merge(arr,p,q,r);
+    if(arr.size()>=5 && arr.size()<=25){
+            insertionSort(arr);
+    }else{
+        if(p<r){
+            int med = (p+r)/2, q=med;
+            mergeSort(arr, p, med);
+            mergeSort(arr, med+1, r);
+            merge(arr,p,q,r);
+        }
     }
 }
 
