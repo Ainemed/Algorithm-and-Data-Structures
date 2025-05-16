@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int fib_dinamic(int num){
+int fib_dynamic(int num){
     if(num==0 || num==1){
         return num;
     }
@@ -23,7 +23,7 @@ int main(){
     cout<<"Num: ";
     cin>>num;
 
-    cout<<"Fib: "<<fib_dinamic(num)<<endl;
+    cout<<"Fib: "<<fib_dynamic(num)<<endl;
 
     return 0;
 }
