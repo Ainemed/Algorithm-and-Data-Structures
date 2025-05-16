@@ -10,6 +10,7 @@
         "limits": "cpp",
         "ratio": "cpp",
         "algorithm": "cpp",
-        "stdexcept": "cpp"
+        "stdexcept": "cpp",
+        "__config": "cpp"
     }
 }
