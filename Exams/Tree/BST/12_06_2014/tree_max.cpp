@@ -54,7 +54,13 @@ void preorder_see(Node* v){
         preorder_see(v->right);
     }
 }
-
+void createArr(Node* v, vector<int>& arr){
+    if(v){
+        arr.push_back(v->key);
+        createArr(v->left, arr);
+        createArr(v->right, arr);
+    }
+}
 /**
  * @brief Complexity: Theta(h) where h is the height of the tree
  * 
@@ -96,6 +102,14 @@ int main(){
     
     cout<<"Maximum Number: "<<tree_maximum(tree.root)->key<<endl;
     cout<<"Minimum Number: "<<tree_minimum(tree.root)->key<<endl;
+
+    vector<int> arr2;
+    createArr(tree.root, arr2);
+    for (size_t i = 0; i < arr2.size(); i++)
+    {
+        cout<<arr2.at(i)<<endl;
+    }
+    
 
     return 0;
 }
