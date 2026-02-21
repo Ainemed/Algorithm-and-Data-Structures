@@ -29,6 +29,7 @@ int  partition(vector<int>& arr, int p, int r, int& high) {
 
     return low; // A[p..low-1] < pivot, A[low..high] == pivot, A[high+1..r] > pivot
 }
+
 void quickSort(vector<int>& arr, int p, int r){
     if(p<r){
         int t=0, q= partition(arr, p, r, t);
@@ -58,9 +59,6 @@ int main(){
     {
         cout<<arr.at(i)<<endl;
     }
-    
-    
-
 
     return 0;
 }

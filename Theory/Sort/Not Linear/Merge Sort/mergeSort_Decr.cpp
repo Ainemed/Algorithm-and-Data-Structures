@@ -5,7 +5,7 @@ void merge(vector<int>& arr, int p, int q, int r){
     int n2 = r - q;
 
     vector<int> tmp1, tmp2;
-
+    
     int min=arr.at(0);
     
     for(int i=0; i<n1;i++){
